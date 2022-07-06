@@ -68,7 +68,7 @@ function Mensagens() {
           <div className="header-page d-flex mt-3">
             <Link to="/Perfil" style={temaBg}>
               <AiOutlineLeft className="my-auto" />
-              <h2 className="ms-3">Bootcamps em Andamento</h2>
+              <h2 className="ms-3">Mensagens</h2>
             </Link>
           </div>
 

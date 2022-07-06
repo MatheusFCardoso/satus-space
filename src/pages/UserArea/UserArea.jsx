@@ -146,7 +146,7 @@ function UserArea() {
 
                                         {bootcampDados.map((bootcamp) => (
                                             <BootcampCard
-                                                styleComponent={temaCard}
+                                            styleComponent={temaCard2}
                                                 curso={bootcamp.curso}
                                                 concluido={bootcamp.concluido}
                                                 empresa={bootcamp.empresa}

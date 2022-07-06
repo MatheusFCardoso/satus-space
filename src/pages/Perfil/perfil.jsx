@@ -50,6 +50,9 @@ function Perfil() {
         color: escuro ? "white" : "black"
     }
 
+    const temaFont = {
+        color: escuro ? "white" : "black"
+    }
 
     const temaBord = {
         borderColor: escuro ? "white" : "black",
@@ -62,11 +65,11 @@ function Perfil() {
     }
 
     const fonteColor = {
-        color : escuro ?  "var(--cor04)" : "var(--cor03)" 
+        color: escuro ? "var(--cor04)" : "var(--cor03)"
     }
 
-    const logo = escuro ?  logoBranco : logoAzul
-    const fonte = escuro ?  fonteBranco : fonteAzul
+    const logo = escuro ? logoBranco : logoAzul
+    const fonte = escuro ? fonteBranco : fonteAzul
 
     function mudarTema() {
         setEscuro(!escuro)
@@ -78,7 +81,7 @@ function Perfil() {
         }
     ])
 
-    const buttonTheme = escuro ? <BsFillMoonFill/> : <BsSun/>
+    const buttonTheme = escuro ? <BsFillMoonFill /> : <BsSun />
 
 
 
@@ -87,12 +90,12 @@ function Perfil() {
 
 
 
-            
+
 
 
             <div className="perfil">
 
-            <PerfilBar styleComponent={temaCard} />
+                <PerfilBar styleComponent={temaCard} />
 
                 <div className="perfil-section">
                     <img className="img-perfil" src="https://media-exp2.licdn.com/dms/image/C4D03AQERFmUysyUMXQ/profile-displayphoto-shrink_800_800/0/1569545019530?e=1661385600&v=beta&t=pctslMBGgaLu4Ng5r7a9qQ5APo-1YLzHz0OnK4rjBQg" alt="Aurora" />
@@ -110,7 +113,7 @@ function Perfil() {
 
             </div>
 
-            
+
 
             <div className="container text-white ">
 
@@ -127,7 +130,8 @@ function Perfil() {
                                 <div className="row">
                                     <div className="col-md-9 col-7">
 
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex tempora ipsum error, temporibus libero repellendus atque? Nesciunt hic placeat impedit quas, alias ducimus unde officiis temporibus beatae, cumque adipisci totam.</p>
+                                        <p>No momento estou iniciando meus estudos na área da programação,
+                                            com a finalidade de desenvolver meus conhecimentos na área da tecnologia.</p>
 
                                     </div>
 
@@ -150,7 +154,7 @@ function Perfil() {
 
                     </section>
 
-                    {/* <section className="col-lg-10">
+                    <section className="col-lg-10">
                         <div className="section-perfil" style={temaCard}>
 
                             <div className="card-header px-4">
@@ -165,7 +169,7 @@ function Perfil() {
                                         <JavaMedal />
                                         <CssMedal />
                                         <JsMedal />
-                                        <ReactMedal />
+                                        
 
                                     </div>
                                 </div>
@@ -176,7 +180,7 @@ function Perfil() {
 
                         </div>
 
-                    </section> */}
+                    </section>
 
                     <section className="col-lg-5">
                         <div className="section-perfil" style={temaCard}>
@@ -348,7 +352,10 @@ function Perfil() {
                                 <div className="more-info">
 
                                     <div>
-                                        <FiSearch className="" /><h4>Procurar Vagas</h4>
+                                        <Link to="/vagas" style={temaFont}>
+                                            <FiSearch className="" /><h4>Procurar Bootcamps</h4>
+                                        </Link>
+
                                     </div>
 
 
@@ -359,7 +366,9 @@ function Perfil() {
 
                                 <div className="more-info">
                                     <div>
-                                        <BiBookAlt className="me-2" /><h4>Minha Agenda</h4>
+                                        <Link to="/user/area" style={temaFont}>
+                                            <BiBookAlt className="me-2" /><h4>Minha Agenda</h4>
+                                        </Link>
                                     </div>
 
                                     <IoIosArrowForward className="ms-auto" />
@@ -377,11 +386,11 @@ function Perfil() {
             </div>
 
             <Footer
-            
+
                 styleComponent={temaBg}
                 fonte={fonte}
                 logo={logo}
-            
+
             />
         </div>
     )

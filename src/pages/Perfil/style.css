@@ -238,6 +238,13 @@
     border-bottom: 1px solid white;
 }
 
+
+.more-info a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
 .more-info svg{
     font-size: 1.3em;
     margin-right: 10px;
