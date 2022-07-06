@@ -28,7 +28,7 @@ function LoginEmpresa() {
                                     <input className="form-control" type="password" name="" id="" />
 
                                     <Link className="d-block my-3 mx-auto text-center link" to='/'>Esqueceu a senha ?</Link>
-                                    <button className="d-block mx-auto mt-3 btn-form">Entrar</button>
+                                    <Link className="link" to="/empresa/area" ><button className="d-block mx-auto mt-3 btn-form">Entrar</button></Link>
 
                                 </form>
 

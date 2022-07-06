@@ -20,7 +20,7 @@ function DropdownPerfil({ extraButton,styleComponent,id = "dropDown", onClose = 
                 <ul className="drop-down-perfil" style={styleComponent}>
 
                     <Link style={styleComponent} to="/perfil"><li><BsFillPersonFill/> Perfil</li></Link>
-                    <Link style={styleComponent} to="/mensagem"><li><HiOutlineMail/>Mensagem</li></Link>
+                    <Link style={styleComponent} to="/mensagens"><li><HiOutlineMail/>Mensagem</li></Link>
                     <Link style={styleComponent} to="/perfil"><li><AiOutlineDatabase/>Meus dados</li></Link>
                     <Link style={styleComponent} to="/"><li><HiOutlineLogout/>Sair</li></Link>
                     {extraButton}
