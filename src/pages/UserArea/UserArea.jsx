@@ -8,13 +8,15 @@ import AgendaBox from "../../components/AgendaBox";
 import BootcampCard from "../../components/BootcampCard";
 import Footer from "../../components/Footer/index"
 import NavBarUser from "../../components/Header/NavBarUser";
+import bootHtmlCss from "../../assets/image/bootcamp-HTML-CSS.png"
+import bootJava from "../../assets/image/bootcamp-JAVA-SPRING.png"
 
 
 import { RiSuitcaseLine } from "react-icons/ri"
 import { ImBook } from "react-icons/im"
 
-import {BsSun} from "react-icons/bs"
-import {BsFillMoonFill} from "react-icons/bs"
+import { BsSun } from "react-icons/bs"
+import { BsFillMoonFill } from "react-icons/bs"
 
 import userArea from "../../../src/assets/image/user-area.png"
 
@@ -26,7 +28,7 @@ import fonteBranco from "../../assets/image/fonteBranco.png"
 
 function UserArea() {
 
-    
+
 
     const [bootcampDados] = useState([
         {
@@ -51,7 +53,7 @@ function UserArea() {
 
     ])
 
-    
+
 
     const [escuro, setEscuro] = useState(false)
 
@@ -73,8 +75,8 @@ function UserArea() {
         color: escuro ? "white" : "black"
     }
 
-    const logo = escuro ?  logoBranco : logoAzul
-    const fonte = escuro ?  fonteBranco : fonteAzul
+    const logo = escuro ? logoBranco : logoAzul
+    const fonte = escuro ? fonteBranco : fonteAzul
 
     function mudarTema() {
         setEscuro(!escuro)
@@ -82,18 +84,18 @@ function UserArea() {
 
     return (
         <div className="App" style={temaBg}>
-            
+
             <NavBarUser
-            
-            extraButton={extraButton}
-            
+
+                extraButton={extraButton}
+
             />
 
             <div className="container-fluid" >
                 <div className="row gx-2 gy-2">
                     <Sidebar
-                    
-                    extraButton={extraButton}
+
+                        extraButton={extraButton}
 
                     />
 
@@ -121,57 +123,71 @@ function UserArea() {
                             {/*  Seção bootcamps */}
                             <div className="col-lg-12 bootcamp-section " style={temaCard}>
 
-                                
-                                    <div className="card-header">
 
-                                        <h3>Bootcamps em andamento</h3>
-                                        
+                                <div className="card-header">
+
+                                    <h3>Bootcamps em andamento</h3>
+
+
+                                </div>
+
+                                <div className="card-body">
+
+
+                                    
+                                    <div className="row d-flex justify-content-center bootcamp" style={temaCard2}>
+
+                                        <div className="col-lg-5 col-md-5 p-2 py-4 ">
+                                            <img src={bootHtmlCss} className="img-fluid" alt="" srcset="" />
+                                        </div>
+
+                                        <div className="d-flex justify-content-center align-items-center  col-lg-7 col-md-7 py-4 ">
+                                            <div>
+                                                <h4>Bootcamp HTML & CSS</h4>
+                                                {/* <p>{concluido}%</p> */}
+                                                <progress value="70" max="100" className="barraProgresso">70 %</progress>
+                                                <p> Satus Space, Analista de Sistemas, Dev Front end básico com Gabriel Augusto</p>
+                                                <button className="mx-auto d-block">Mais informações</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div className="row d-flex justify-content-center bootcamp" style={temaCard2}>
+
+                                        <div className="col-lg-5 col-md-5 p-2 py-4 ">
+                                            <img src={bootJava} className="img-fluid" alt="" srcset="" />
+                                        </div>
+
+                                        <div className="d-flex justify-content-center align-items-center  col-lg-7 col-md-7 py-4 ">
+                                            <div>
+                                                <h4>Bootcamp Java Back End</h4>
+                                                {/* <p>{concluido}%</p> */}
+                                                <progress value="70" max="100" className="barraProgresso">70 %</progress>
+                                                <p> Satus Space, Dev End, Dev Back End end básico com Jailson Costa</p>
+                                                <button className="mx-auto d-block">Mais informações</button>
+                                            </div>
+                                        </div>
 
                                     </div>
 
-                                    <div className="card-body">
-
-
-                                        {bootcampDados.map((bootcamp) => (
-                                            <BootcampCard
-                                                styleComponent={temaCard2}
-                                                curso={bootcamp.curso}
-                                                concluido={bootcamp.concluido}
-                                                empresa={bootcamp.empresa}
-                                                vaga={bootcamp.vaga}
-                                                prof={bootcamp.prof}
-                                                button={bootcamp.button}
-
-                                            />))}
-
-                                        {bootcampDados.map((bootcamp) => (
-                                            <BootcampCard
-                                            styleComponent={temaCard2}
-                                                curso={bootcamp.curso}
-                                                concluido={bootcamp.concluido}
-                                                empresa={bootcamp.empresa}
-                                                vaga={bootcamp.vaga}
-                                                prof={bootcamp.prof}
-                                                button={bootcamp.button}
-
-                                            />))}
 
 
 
 
-                                        {/* Componentizar */}
+
+                                    {/* Componentizar */}
 
 
 
-                                    </div>
+                                </div>
 
 
 
-                                    {/* <div className="card-header">
+                                {/* <div className="card-header">
                                         <h3>Bootcamps recomendados</h3>
                                     </div> */}
 
-                                    {/* <div className="card-body">
+                                {/* <div className="card-body">
 
                                         {bootcampDados.map((bootcamp) => (
                                             <BootcampCard
@@ -187,11 +203,11 @@ function UserArea() {
 
                                     </div> */}
 
-                                    <div className="card-footer">
+                                <div className="card-footer">
 
-                                        <p className="text-center" >Encontre mais Bootcamps</p>
+                                    <p className="text-center" >Encontre mais Bootcamps</p>
 
-                                    
+
                                 </div>
 
 
@@ -213,7 +229,7 @@ function UserArea() {
                                     {/* Componetizar */}
                                     {agendaDados.map((agenda) => (
                                         <AgendaBox
-                                            
+
                                             data={agenda.data}
                                             dado={agenda.dado}
                                             tipo={agenda.tipo}
@@ -237,11 +253,11 @@ function UserArea() {
             </div>
 
             <Footer
-            
+
                 styleComponent={temaBg}
                 fonte={fonte}
                 logo={logo}
-            
+
             />
 
         </div>

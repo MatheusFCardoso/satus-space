@@ -52,6 +52,21 @@ function EmpresaArea() {
         setEscuro(!escuro)
     }
 
+    const [agendaDados] = useState([
+        {
+            data: "30/06/2022",
+            dado: "Entrevista de Candidato",
+            tipo: <RiSuitcaseLine />
+        },
+        {
+            data: "31/06/2022",
+            dado: "Entrevista de Canditado",
+            tipo: <RiSuitcaseLine />
+        },
+
+
+    ])
+
 
 
     return (
@@ -179,8 +194,14 @@ function EmpresaArea() {
                                 <div className="row gx-2">
 
                                     {/* Componetizar */}
-                                    <AgendaBox />
-                                    <AgendaBox />
+                                    {agendaDados.map((agenda) => (
+                                        <AgendaBox
+                                            
+                                            data={agenda.data}
+                                            dado={agenda.dado}
+                                            tipo={agenda.tipo}
+
+                                        />))}
 
 
                                 </div>
