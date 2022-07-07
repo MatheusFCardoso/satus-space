@@ -30,6 +30,33 @@
     display: block;
 }
 
+.sobre-alterar-modo-button svg{
+    font-size: 1.5em;
+}
+
+.sobre-alterar-modo-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.4em;
+    height: 3.4em;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    left: calc(100% - 100px);
+    top: -135px;
+    margin: 0px;
+    transition: background-color 0.8s ease, color 0.5s ease, transform 0.9s ease, box-shadow 0.95s;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.26);
+    
+}
+
+.sobre-alterar-modo-button:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+}
+
+
 @keyframes flutuacao {
     0% {
 		transform: translatey(0px);
@@ -133,6 +160,14 @@
     font-size: 2.2em;
 }
 
+.imagem-equipe p{
+    margin: 10px 0px 5px 0px ;
+}
+
+.imagem-equipe svg{
+    margin: 0px 0px 5px 0px ;
+}
+
 
 
 
@@ -140,11 +175,16 @@
 
     .mvv-cont{
         margin-top: 10px;
-        height: 350px;
+        height: 360px;
     }
 
     .mvv-cont p{
-        margin-top: 50px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .mvv-cont h2{
+        margin-bottom: 0px;
         text-align: center;
     }
 

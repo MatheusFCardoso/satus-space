@@ -10,7 +10,7 @@ import { GiHamburgerMenu } from "react-icons/gi"
 /* CSS do componente */
 import "./style.css"
 
-function PerfilBar({styleComponent}) {
+function PerfilBar({styleComponent,perfilImg,link}) {
 
     const [isDropDownVisible, setDropDownVisible] = useState(false)
 
@@ -18,7 +18,7 @@ function PerfilBar({styleComponent}) {
         <>
             <nav class="navbar-perfil  pt-1">
 
-                <Link to="/user/area">
+                <Link to={link}>
                     <div className="py-2 ps-2 d-flex">
                         <Logo />
                     </div>
@@ -28,7 +28,7 @@ function PerfilBar({styleComponent}) {
                     
                     <div className="ms-auto">
 
-                    <img src="https://media-exp2.licdn.com/dms/image/C4D03AQERFmUysyUMXQ/profile-displayphoto-shrink_800_800/0/1569545019530?e=1661385600&v=beta&t=pctslMBGgaLu4Ng5r7a9qQ5APo-1YLzHz0OnK4rjBQg"  onClick={() => setDropDownVisible(true)} className="me-3  d-none d-md-flex perfil-navbar" />
+                    <img src={perfilImg}  onClick={() => setDropDownVisible(true)} className="me-3  d-none d-md-flex perfil-navbar" />
 
                     
 

@@ -42,8 +42,10 @@ import fonteBranco from "../../assets/image/fonteBranco.png"
 
 function Perfil() {
 
+    const linkBack = "/user/area"
+    const imgPerfil ="https://media-exp2.licdn.com/dms/image/C4D03AQERFmUysyUMXQ/profile-displayphoto-shrink_800_800/0/1569545019530?e=1661385600&v=beta&t=pctslMBGgaLu4Ng5r7a9qQ5APo-1YLzHz0OnK4rjBQg"
 
-    const [escuro, setEscuro] = useState(false)
+    const [escuro, setEscuro] = useState(true)
 
     const temaBg = {
         backgroundColor: escuro ? "var(--cor50)" : "var(--bgcolor3)",
@@ -95,7 +97,7 @@ function Perfil() {
 
             <div className="perfil">
 
-                <PerfilBar styleComponent={temaCard} />
+            <PerfilBar styleComponent={temaCard} perfilImg={imgPerfil} link={linkBack} />
 
                 <div className="perfil-section">
                     <img className="img-perfil" src="https://media-exp2.licdn.com/dms/image/C4D03AQERFmUysyUMXQ/profile-displayphoto-shrink_800_800/0/1569545019530?e=1661385600&v=beta&t=pctslMBGgaLu4Ng5r7a9qQ5APo-1YLzHz0OnK4rjBQg" alt="Aurora" />

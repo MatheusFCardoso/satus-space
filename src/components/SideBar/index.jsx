@@ -26,7 +26,7 @@ function Sidebar({extraButton}) {
             <div className="d-none d-lg-flex col-lg-2">
 
                 <div className="side-bar py-4">
-                    <Link to="/">
+                    <Link to={'/user/area'}>
                         <div className="logo">
                             <img src={logo} className="navbar-logo" />
                             <img src={fonteBranco} className="navbar-fonte" />
@@ -36,7 +36,7 @@ function Sidebar({extraButton}) {
 
                     <ul>
                         <li className="">
-                            <Link to='/'>
+                            <Link to='/user/area'>
                                 <AiFillHome className="mx-2" />
                                 Home
                             </Link>

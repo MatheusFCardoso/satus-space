@@ -1,4 +1,6 @@
 import React from "react";
+import { useState } from "react";
+
 import "./style.css";
 import missao from "../../../src/assets/image/missao.png";
 import visao from "../../../src/assets/image/visao.png"
@@ -16,19 +18,47 @@ import rian from "../../../src/assets/image/rian.png"
 import { FaGithub } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 
-//IMAGENS DO FOOTER
-import logo from "../../assets/image/logoAzul.png";
-import fonte from "../../assets/image/fonteAzul.png"
+
+//Footer dark e light mode
+import logoAzul from "../../assets/image/logoAzul.png";
+import fonteAzul from "../../assets/image/fonteAzul.png"
+import logoBranco from "../../assets/image/logo.png";
+import fonteBranco from "../../assets/image/fonteBranco.png"
+
+
+import { BsSun } from "react-icons/bs"
+import { BsFillMoonFill } from "react-icons/bs"
+
 import NavBarLogo2 from "../../components/Header/NavBarLogo2";
 import Footer from "../../components/Footer";
 
 function Sobre() {
 
-
+    const [escuro, setEscuro] = useState(true)
 
     const temaBg = {
-        backgroundColor: "var(--bgcolor3)",
-        color: "black"
+        backgroundColor: escuro ? "var(--cor50)" : "var(--bgcolor3)",
+        color: escuro ? "white" : "black"
+    }
+
+
+    const buttonTheme = escuro ? <BsFillMoonFill /> : <BsSun />
+
+    const temaBord = {
+        borderColor: escuro ? "white" : "black",
+        color: escuro ? "white" : "white"
+    }
+
+    const temaCard = {
+        backgroundColor: escuro ? "var(--bgcolor)" : "var(--bgcolor4)",
+        color: escuro ? "white" : "black"
+    }
+
+    const logo = escuro ? logoBranco : logoAzul
+    const fonte = escuro ? fonteBranco : fonteAzul
+
+    function mudarTema() {
+        setEscuro(!escuro)
     }
 
 
@@ -45,6 +75,9 @@ function Sobre() {
                         <p className="mx-auto" >
                             A Satus Space tem o propósito de gerar oportunidades e capacitar pessoas de 40 anos ou mais através da educação e da tecnologia ajudando-os a se reinserir no mercado de trabalho.
                         </p>
+
+
+
                     </div>
 
                     <div className="col-md-6">
@@ -54,7 +87,14 @@ function Sobre() {
                     </div>
 
 
+
+
                 </div>
+
+                <div className="sobre-alterar-modo-button" onClick={mudarTema} style={temaBg}>
+                    {buttonTheme}
+                </div>
+
             </div>
             <div className="container mt-5 mt-md-1">
                 <div className="row sobre-section g-4">

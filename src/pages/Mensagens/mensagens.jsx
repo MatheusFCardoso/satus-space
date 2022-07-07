@@ -22,7 +22,7 @@ import fonteBranco from "../../assets/image/fonteBranco.png"
 
 function Mensagens() {
 
-  const [escuro, setEscuro] = useState(false)
+  const [escuro, setEscuro] = useState(true)
 
   const temaBg = {
     backgroundColor: escuro ? "var(--cor50)" : "var(--bgcolor3)",

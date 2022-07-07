@@ -51,7 +51,7 @@ function DetalheBootcamp() {
                         <div className="card-body">
                             <h4 className="titleDesc">Desenvolvedor Front-End Jr</h4>
 
-                            <p >Satus Space e Garimp</p>
+                            <p >Satus Space e Empresa D</p>
                             <p><span className="bold">Formato aulas:</span> Remoto</p>
                             {/* <p>R$ 2000,00 a R$ 2700,00 (Bruto mensal)</p> */}
                             <p><span className="bold">Número de vagas:</span> 20</p>
@@ -74,9 +74,8 @@ function DetalheBootcamp() {
                                 
                             </ul>
 
-                            <h4 className="titleDesc">A Empresa - </h4>
-                            <p>A Garimp é </p>
-
+                            <h4 className="titleDesc">A Empresa - Empresa D </h4>
+                            <p>A Empresa D é uma empresa de desenvolvimento de sites e sistemas.</p>
                         </div>
 
 
