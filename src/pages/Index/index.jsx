@@ -21,7 +21,7 @@ import "./style.css";
 function Index() {
 
 
-    const [escuro, setEscuro] = useState(false)
+    const [escuro, setEscuro] = useState(true)
 
     const temaDegrade = {
         backgroundImage: escuro ? "linear-gradient(to bottom, var(--cor06) , var(--cor50) 40% )" : "linear-gradient(to bottom, var(--cor06) , var(--bgcolor3) 40% )"
