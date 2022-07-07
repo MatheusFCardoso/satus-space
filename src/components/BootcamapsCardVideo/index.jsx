@@ -1,24 +1,27 @@
 import React from "react";
-
-import {FiPlay} from "react-icons/fi"
+import { Link } from "react-router-dom";
+import { FiPlay } from "react-icons/fi"
+import bootHtmlCss from "../../assets/image/bootcamp-HTML-CSS.png"
 
 import "./style.css";
 
-function BootcamapsCardVideo({curso, empresa, thumbnail}) {
+function BootcamapsCardVideo({ curso, empresa, link }) {
     return (
         <>
-            <div className="col-md-4 ">
-                <div className="video-box">
-                    <img src={thumbnail} className="img-fluid" alt="" />
-                    <div className="d-flex align-items-center justify-content-between footer-video p-3">
-                        <div>
-                            <p>{curso}</p>
-                            <p>{empresa}</p>
+            <Link to={link}>
+                <div className="col-md-4 ">
+                    <div className="video-box">
+                        <img src={bootHtmlCss} className="img-fluid" alt="" />
+                        <div className="d-flex align-items-center justify-content-between footer-video p-3">
+                            <div>
+                                <p>{curso}</p>
+                                <p>{empresa}</p>
+                            </div>
+                            <FiPlay className="" />
                         </div>
-                        <FiPlay className="" />
                     </div>
                 </div>
-            </div>
+            </Link>
         </>
     )
 }

@@ -4,7 +4,7 @@ import {
     Route
 } from "react-router-dom";
 
-import VLibras from "@djpfs/react-vlibras";
+
 
 /* pages */
 import Index from './pages/Index/index';

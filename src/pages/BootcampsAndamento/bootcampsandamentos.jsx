@@ -58,7 +58,8 @@ function BootcampsAndamento() {
         {
             curso: "Curso de HTML e CSS",
             empresa: "Satus Space",
-            thumbnail: "https://i.ytimg.com/vi/Ejkb_YpuHWs/maxresdefault.jpg?v=5f8061fa"
+            thumbnail: "https://i.ytimg.com/vi/Ejkb_YpuHWs/maxresdefault.jpg?v=5f8061fa",
+            link: "/video"
         }
 
     ])
@@ -92,6 +93,7 @@ function BootcampsAndamento() {
                             curso={bootcamp.curso}
                             empresa={bootcamp.empresa}
                             thumbnail={bootcamp.thumbnail}
+                            link={bootcamp.link}
 
                         />))}
 
