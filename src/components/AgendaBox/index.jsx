@@ -2,9 +2,6 @@ import React from "react";
 
 import "./style.css";
 
-import { RiSuitcaseLine } from "react-icons/ri"
-
-
 function AgendaBox({data,dado,tipo}) {
     return (
         <>

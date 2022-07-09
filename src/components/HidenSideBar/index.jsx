@@ -6,7 +6,6 @@ import Logo from "../Logo";
 
 import { AiFillHome } from "react-icons/ai"
 import {FiBook} from "react-icons/fi"
-import { FaRegCompass } from "react-icons/fa"
 import { HiOutlineMail } from "react-icons/hi"
 import { BsGear } from "react-icons/bs"
 import { HiOutlineLogout } from "react-icons/hi"

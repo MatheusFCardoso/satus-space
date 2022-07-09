@@ -14,7 +14,7 @@ import JavaBootcamp from "../../components/JavaBootcamp";
 
 
 import { RiSuitcaseLine } from "react-icons/ri"
-import { ImBook } from "react-icons/im"
+
 
 import { BsSun } from "react-icons/bs"
 import { BsFillMoonFill } from "react-icons/bs"

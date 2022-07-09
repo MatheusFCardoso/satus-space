@@ -1,24 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
 
 import PerfilBar from "../../components/PerfilBar/index.jsx";
 import Footer from "../../components/Footer/index.jsx";
-import { RiArrowDownSLine } from "react-icons/ri";
-import BootcampCard from "../../components/BootcampCard";
 
-import { FiSearch } from "react-icons/fi";
-import { BiBookAlt } from "react-icons/bi";
+
 import { BsLinkedin } from "react-icons/bs";
-import { BsGithub } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { FaFacebookSquare } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
-import { BsFillPersonFill } from "react-icons/bs";
-import { IoIosArrowForward } from "react-icons/io";
 import { BiPencil } from "react-icons/bi";
-
 import { BsSun } from "react-icons/bs"
 import { BsFillMoonFill } from "react-icons/bs"
 
@@ -42,10 +34,7 @@ function Empresa() {
         color: escuro ? "white" : "black"
     }
 
-    const temaFont = {
-        color: escuro ? "white" : "black"
-    }
-
+    
     const temaBord = {
         borderColor: escuro ? "white" : "black",
         color: escuro ? "white" : "white"
@@ -70,20 +59,6 @@ function Empresa() {
    
 
     const buttonTheme = escuro ? <BsFillMoonFill /> : <BsSun />
-
-
-    const [bootcampDados] = useState([
-        {
-            curso: "Curso de HTML e CSS",
-            concluido: 55,
-            empresa: "Satus Space",
-            vaga: "desenvolvedor web",
-            prof: "Gustavo Guanabara",
-            button: "Continuar"
-        },
-
-
-    ])
 
     return (
         <>

@@ -10,7 +10,7 @@ import HtmlMedal from "../../components/Medal/htmlMedal.jsx";
 import JavaMedal from "../../components/Medal/javaMedal.jsx";
 import CssMedal from "../../components/Medal/cssMedal.jsx";
 import JsMedal from "../../components/Medal/jsMedal.jsx";
-import ReactMedal from "../../components/Medal/reactMedal.jsx";
+
 
 /* CSS da página */
 import "./style.css"

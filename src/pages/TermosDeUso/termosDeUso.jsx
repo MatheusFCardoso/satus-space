@@ -5,7 +5,6 @@ import "./style.css";
 import logo from "../../assets/image/logoAzul.png";
 import fonte from "../../assets/image/fonteAzul.png"
 
-import NavBarLogo2 from "../../components/Header/NavBarLogo2";
 import Footer from "../../components/Footer";
 import NavBarLogoColor from "../../components/Header/NavBarLogoColor";
 function TermosDeUso() {

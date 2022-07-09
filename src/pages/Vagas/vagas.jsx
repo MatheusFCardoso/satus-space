@@ -1,9 +1,7 @@
 import React from "react";
 import "./style.css";
 import Sidebar from "../../components/SideBar";
-import { BsSearch } from "react-icons/bs";
-import { MdRoom } from "react-icons/md";
-import { MdOutlinePaid } from "react-icons/md";
+
 import NavBarUser from "../../components/Header/NavBarUser";
 import { useState } from "react";
 import {BsFillMoonFill} from 'react-icons/bs';

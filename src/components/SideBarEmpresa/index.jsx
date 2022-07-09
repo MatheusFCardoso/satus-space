@@ -1,17 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Logo from "../Logo";
-
-
 import logo from "../../../src/assets/image/logo.png"
 import fonteBranco from "../../../src/assets/image/fonteBranco.png"
 
-
-
 import { AiFillHome } from "react-icons/ai"
-import { FiBook } from "react-icons/fi"
-import { FaRegCompass } from "react-icons/fa"
 import { HiOutlineMail } from "react-icons/hi"
 import { BsGear } from "react-icons/bs"
 import { HiOutlineLogout } from "react-icons/hi"
@@ -26,8 +19,8 @@ function SideBarEmpresa({extraButton}) {
                 <div className="side-bar py-4">
                     <Link to={'/user/area'}>
                         <div className="logo">
-                            <img src={logo} className="navbar-logo" />
-                            <img src={fonteBranco} className="navbar-fonte" />
+                            <img src={logo} alt="logo" className="navbar-logo" />
+                            <img src={fonteBranco} alt="Satus-Space" className="navbar-fonte" />
                         </div>
                     </Link>
 

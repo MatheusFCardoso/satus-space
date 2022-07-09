@@ -28,7 +28,7 @@ function PerfilBar({styleComponent,perfilImg,link,linkPerfil}) {
                     
                     <div className="ms-auto">
 
-                    <img src={perfilImg}  onClick={() => setDropDownVisible(true)} className="me-3  d-none d-md-flex perfil-navbar" />
+                    <img src={perfilImg} alt="Usuário foto"  onClick={() => setDropDownVisible(true)} className="me-3  d-none d-md-flex perfil-navbar" />
 
                     
 
