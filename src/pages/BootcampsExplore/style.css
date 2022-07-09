@@ -1,0 +1,129 @@
+.bootcampsMain{
+    height: 100vh;
+    background-color: var(--bgcolor);
+}
+
+ .containerBootcamps{
+    z-index: 1;
+    border-radius: 10px;
+    width: 82%;
+    height: 730px;
+}
+
+.topContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+h1{
+    color: white;
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.imgUsuario{
+    border-radius: 50%;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.input{
+    display: flex;
+}
+
+input {
+    padding-left: 5px;
+    background-color: #2e2e2e;
+    color: darkgray;
+    height: 39.5px;
+    width: 260px;
+    border-top-right-radius: 5px;   
+    border-bottom-right-radius: 5px;   
+    border: none;
+}
+
+select{
+    background-color: #2e2e2e;
+    color: darkgray;
+    height: 39.5px;
+    width: 260px;
+    border-top-right-radius: 5px;   
+    border-bottom-right-radius: 5px;   
+    border: none;
+    cursor: pointer;
+}
+
+.svgBackground{
+    background-color: #050840;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+} 
+
+ button{
+    background-color: #050840;
+    color: white;
+    height: 39px;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    padding-inline: 20px;
+}
+
+button:hover{
+    background-color: white;
+    color: #050840;
+    cursor: pointer;
+}
+
+
+.inputCheckBox{
+   margin-top: 30px;
+   margin-left: 20px;
+}
+
+.descCheckBox{
+    color: white;
+    margin-left: 80px;
+    margin-top: -25px;
+}
+
+.componentVaga{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 1075px;
+    color: white;
+}
+
+
+
+.bootcampsMain .card-body{
+    overflow-y: scroll;
+    height: 82%;
+}
+
+.bootcampsMain .card-body::-webkit-scrollbar{
+  background-color: transparent;  
+  width: 5px;
+}
+
+.bootcampsMain .card-body::-webkit-scrollbar:hover{
+    width: 10px;
+}
+
+.bootcampsMain .card-body::-webkit-scrollbar-thumb{
+    background-color: var(--bgcolor2);
+    border-radius: 15px;
+}
+
+.bootcampsMain .card-body::-webkit-scrollbar-thumb:hover{
+    background-color: var(--cor03);
+}

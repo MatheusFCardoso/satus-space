@@ -7,7 +7,7 @@ import { HiOutlineMail } from "react-icons/hi"
 import { HiOutlineLogout } from "react-icons/hi"
 import { AiOutlineDatabase } from "react-icons/ai"
 
-function DropdownPerfil({ extraButton,styleComponent,id = "dropDown", onClose = () => { }, children }) {
+function DropdownPerfil({ linkPerfil,extraButton,styleComponent,id = "dropDown", onClose = () => { }, children }) {
 
     const clickFora = (e) => {
         if (e.target.id === id) onClose()
@@ -19,7 +19,7 @@ function DropdownPerfil({ extraButton,styleComponent,id = "dropDown", onClose = 
 
                 <ul className="drop-down-perfil" style={styleComponent}>
 
-                    <Link style={styleComponent} to="/perfil"><li><BsFillPersonFill/> Perfil</li></Link>
+                    <Link style={styleComponent} to={linkPerfil}><li><BsFillPersonFill/> Perfil</li></Link>
                     <Link style={styleComponent} to="/mensagens"><li><HiOutlineMail/>Mensagem</li></Link>
                     <Link style={styleComponent} to="/perfil"><li><AiOutlineDatabase/>Meus dados</li></Link>
                     <Link style={styleComponent} to="/"><li><HiOutlineLogout/>Sair</li></Link>

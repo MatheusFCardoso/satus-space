@@ -41,11 +41,16 @@
     margin: 0px;
 }
 
+.bootcamp-section .card-footer a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .bootcamp-section .card-footer{
     height: 6vh;
 }
 
-.bootcamp-section .card-footer p:hover{
+.bootcamp-section .card-footer a:hover{
     color:  var(--cor03);
     cursor: pointer;
     text-decoration: underline;

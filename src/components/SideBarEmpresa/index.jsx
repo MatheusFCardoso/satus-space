@@ -1,55 +1,51 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import Logo from "../Logo";
+
+
+import logo from "../../../src/assets/image/logo.png"
+import fonteBranco from "../../../src/assets/image/fonteBranco.png"
 
 
 
 import { AiFillHome } from "react-icons/ai"
-import {FiBook} from "react-icons/fi"
+import { FiBook } from "react-icons/fi"
 import { FaRegCompass } from "react-icons/fa"
 import { HiOutlineMail } from "react-icons/hi"
 import { BsGear } from "react-icons/bs"
 import { HiOutlineLogout } from "react-icons/hi"
 import {BsFillPersonFill} from "react-icons/bs"
 
-import "./style.css";
 
-const HidenSideBar2 = ({ extraButton, id = "hiden-side-bar" , onClose = () =>{}, children}) => {
-
-    const clickFora = (e) => {
-        if(e.target.id === id) onClose()
-    }
-
+function SideBarEmpresa({extraButton}) {
     return (
         <>
-            <div id={id} onClick = {clickFora} className="hiden-side-bar">
-                <div className="side-bar-nav2">
+            <div className="d-none d-lg-flex col-lg-2">
 
-                    <div className="side-bar-header">
-                        <Logo  />
-                    </div>
+                <div className="side-bar py-4">
+                    <Link to={'/user/area'}>
+                        <div className="logo">
+                            <img src={logo} className="navbar-logo" />
+                            <img src={fonteBranco} className="navbar-fonte" />
+                        </div>
+                    </Link>
 
 
                     <ul>
-                        <li>
-                            <Link to='/'>
+                        <li className="">
+                            <Link to='/user/area'>
                                 <AiFillHome className="mx-2" />
                                 Home
                             </Link>
                         </li>
-                        <li>
-                            <Link to='/perfil'>
+                        <li className="">
+                            <Link to='/empresa'>
                                 <BsFillPersonFill className="mx-2" />
                                 Perfil
                             </Link>
                         </li>
-                        <li>
-                            <Link to="/Bootcamps">
-                                <FiBook className="mx-2" />
-                                Bootcamps
-                            </Link>
-                        </li>
-                        <li>
+                        <li className="">
                             <Link to="/mensagens">
                                 <HiOutlineMail className="mx-2" />
                                 Mensagens
@@ -63,22 +59,20 @@ const HidenSideBar2 = ({ extraButton, id = "hiden-side-bar" , onClose = () =>{},
                                 Configurações
                             </Link>
                         </li>
-
                         <li className="">
                             {extraButton}
                         </li>
-
                     </ul>
 
-                    <Link className="mx-auto mb-5" to="/">
+                    <Link className="mx-auto" to="/">
                         <HiOutlineLogout />
                         Sair
                     </Link>
 
                 </div>
             </div>
-        </>
-    )
-}
 
-export default HidenSideBar2;
+        </>
+    );
+};
+export default SideBarEmpresa;

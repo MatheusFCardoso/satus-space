@@ -8,8 +8,9 @@ import AgendaBox from "../../components/AgendaBox";
 import BootcampCard from "../../components/BootcampCard";
 import Footer from "../../components/Footer/index"
 import NavBarUser from "../../components/Header/NavBarUser";
-import bootHtmlCss from "../../assets/image/bootcamp-HTML-CSS.png"
-import bootJava from "../../assets/image/bootcamp-JAVA-SPRING.png"
+
+import HtmlBootcamp from "../../components/HtmlBootcamp";
+import JavaBootcamp from "../../components/JavaBootcamp";
 
 
 import { RiSuitcaseLine } from "react-icons/ri"
@@ -32,13 +33,25 @@ function UserArea() {
 
     const [bootcampDados] = useState([
         {
-            curso: "Curso de HTML e CSS",
-            concluido: 55,
-            empresa: "Satus Space",
-            vaga: "desenvolvedor web",
-            prof: "Gustavo Guanabara",
-            button: "Continuar"
+            thumbNail: <JavaBootcamp />,
+            button: "Continuar",
+            curso: "Java e SpringBoot",
+            prof: "Jailson Costa",
+            concluido: 25,
+            button: "Continuar",
+            vaga: "Dev back-end .jr",
+            empresa: "Satus Space"
         },
+        {
+            thumbNail: <HtmlBootcamp />,
+            button: "Continuar",
+            curso: "HTML e CSS",
+            prof: "Gabriel",
+            concluido: 80,
+            button: "Continuar",
+            vaga: "Dev front-end .jr",
+            empresa: "Satus Space"
+        }
 
 
     ])
@@ -134,79 +147,28 @@ function UserArea() {
                                 <div className="card-body">
 
 
-                                    
-                                    <div className="row d-flex justify-content-center bootcamp" style={temaCard2}>
 
-                                        <div className="col-lg-5 col-md-5 p-2 py-4 ">
-                                            <img src={bootHtmlCss} className="img-fluid" alt="" srcset="" />
-                                        </div>
+                                    {bootcampDados.map((bootcamp) => (
+                                        <BootcampCard
 
-                                        <div className="d-flex justify-content-center align-items-center  col-lg-7 col-md-7 py-4 ">
-                                            <div>
-                                                <h4>Bootcamp HTML & CSS</h4>
-                                                {/* <p>{concluido}%</p> */}
-                                                <progress value="70" max="100" className="barraProgresso">70 %</progress>
-                                                <p> Satus Space, Analista de Sistemas, Dev Front end básico com Gabriel Augusto</p>
-                                                <button className="mx-auto d-block">Mais informações</button>
-                                            </div>
-                                        </div>
+                                            thumbNail={bootcamp.thumbNail}
+                                            button={bootcamp.button}
+                                            styleComponent={temaCard2}
+                                            vaga={bootcamp.vaga}
+                                            prof={bootcamp.prof}
+                                            empresa={bootcamp.empresa}
+                                            curso={bootcamp.curso}
+                                            concluido={bootcamp.concluido}
 
-                                    </div>
-                                    <div className="row d-flex justify-content-center bootcamp" style={temaCard2}>
-
-                                        <div className="col-lg-5 col-md-5 p-2 py-4 ">
-                                            <img src={bootJava} className="img-fluid" alt="" srcset="" />
-                                        </div>
-
-                                        <div className="d-flex justify-content-center align-items-center  col-lg-7 col-md-7 py-4 ">
-                                            <div>
-                                                <h4>Bootcamp Java Back End</h4>
-                                                {/* <p>{concluido}%</p> */}
-                                                <progress value="70" max="100" className="barraProgresso">70 %</progress>
-                                                <p> Satus Space, Dev End, Dev Back End end básico com Jailson Costa</p>
-                                                <button className="mx-auto d-block">Mais informações</button>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-
-
-
-
-                                    {/* Componentizar */}
-
+                                        />
+                                    ))}
 
 
                                 </div>
 
-
-
-                                {/* <div className="card-header">
-                                        <h3>Bootcamps recomendados</h3>
-                                    </div> */}
-
-                                {/* <div className="card-body">
-
-                                        {bootcampDados.map((bootcamp) => (
-                                            <BootcampCard
-
-                                                curso={bootcamp.curso}
-                                                concluido={bootcamp.concluido}
-                                                empresa={bootcamp.empresa}
-                                                vaga={bootcamp.vaga}
-                                                prof={bootcamp.prof}
-                                                button={bootcamp.button}
-
-                                            />))}
-
-                                    </div> */}
-
                                 <div className="card-footer">
 
-                                    <p className="text-center" >Encontre mais Bootcamps</p>
-
+                                    <p className="text-center" ><Link style={temaCard} to="/Bootcamps">Encontre mais Bootcamps</Link></p>
 
                                 </div>
 

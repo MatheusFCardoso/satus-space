@@ -3,7 +3,8 @@
 }
 
 .barraProgresso{
-    margin-left:115px;
+    display: block;
+    margin: auto;
     width: 270px;
     background-color: #01105d
 }

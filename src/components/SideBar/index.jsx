@@ -48,7 +48,7 @@ function Sidebar({extraButton}) {
                             </Link>
                         </li>
                         <li className="">
-                            <Link to="/vagas">
+                            <Link to="/bootcamps">
                                 <FiBook className="mx-2" />
                                 Bootcamps
                             </Link>

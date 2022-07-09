@@ -6,7 +6,6 @@ import Logo from "../Logo";
 
 import { AiFillHome } from "react-icons/ai"
 import {FiBook} from "react-icons/fi"
-import { FaRegCompass } from "react-icons/fa"
 import { HiOutlineMail } from "react-icons/hi"
 import { BsGear } from "react-icons/bs"
 import { HiOutlineLogout } from "react-icons/hi"
@@ -14,7 +13,7 @@ import {BsFillPersonFill} from "react-icons/bs"
 
 import "./style.css";
 
-const HidenSideBar2 = ({ extraButton, id = "hiden-side-bar" , onClose = () =>{}, children}) => {
+const HidenSideBarEmpresa = ({ extraButton, id = "hiden-side-bar" , onClose = () =>{}, children}) => {
 
     const clickFora = (e) => {
         if(e.target.id === id) onClose()
@@ -38,15 +37,9 @@ const HidenSideBar2 = ({ extraButton, id = "hiden-side-bar" , onClose = () =>{},
                             </Link>
                         </li>
                         <li>
-                            <Link to='/perfil'>
+                            <Link to='/empresa'>
                                 <BsFillPersonFill className="mx-2" />
                                 Perfil
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/Bootcamps">
-                                <FiBook className="mx-2" />
-                                Bootcamps
                             </Link>
                         </li>
                         <li>
@@ -81,4 +74,4 @@ const HidenSideBar2 = ({ extraButton, id = "hiden-side-bar" , onClose = () =>{},
     )
 }
 
-export default HidenSideBar2;
+export default HidenSideBarEmpresa;

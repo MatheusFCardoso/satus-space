@@ -23,6 +23,7 @@ import CadEmpresa from "./pages/CadEmpresa/cadEmpresa";
 /* Páginas de bootcamp */
 import Bootcamp from "./pages/Bootcamps/bootcamps";
 import BootcampsAndamento from "./pages/BootcampsAndamento/bootcampsandamentos";
+import BootcampsExplore from "./pages/BootcampsExplore/BootcampsExplore";
 import ExploreBootcamps from "./pages/ExploreBootcamps/exploreBootcamps";
 
 /* Video aulas */
@@ -31,7 +32,8 @@ import VideoAula from "./pages/VideoAula/videoAula";
 /* Áreas de Perfil */
 import Perfil from "./pages/Perfil/perfil";
 import Sobre from "./pages/Sobre/sobre";
-import Vagas from "./pages/Vagas/vagas";
+/* import Vagas from "./pages/Vagas/vagas"; */
+
 import DetalheBootcamp from "./pages/DetalheBootcamp/detalheBootcamp";
 
 import Empresa from "./pages/Empresa/empresa";
@@ -71,24 +73,25 @@ function Rotas() {
                     {/* Páginas de bootcamp */}
                     <Route path='/Bootcamp' exact element={<Bootcamp />} />
                     <Route path='/Bootcamp/Andamento' exact element={<BootcampsAndamento />} />
+                    <Route path='/Bootcamps' exact element={<BootcampsExplore />} />
                     <Route path='/Bootcamp/Explorar' exact element={<ExploreBootcamps />} />
+
+                    <Route path='/Video' exact element={<VideoAula />} />
 
                     {/* Páginas do usuario  */}
                     <Route path='/Perfil' exact element={<Perfil />} />
                     <Route path='/User/Area' exact element={<UserArea />} />
 
-
-                    <Route path='/Video' exact element={<VideoAula />} />
-
-
-
+                    {/* Páginas da empresa */}
                     <Route path='/Empresa' exact element={<Empresa />} />
-
                     <Route path='/Empresa/Area' exact element={<EmpresaArea />} />
+                    
+
+
+
+                    
 
                     <Route path='/Sobre' exact element={<Sobre />} />
-
-                    <Route path='/Vagas' exact element={<Vagas />} />
 
                     <Route path='/DetalheBootcamp' exact element={<DetalheBootcamp />} />
 

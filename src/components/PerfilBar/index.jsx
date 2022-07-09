@@ -10,7 +10,7 @@ import { GiHamburgerMenu } from "react-icons/gi"
 /* CSS do componente */
 import "./style.css"
 
-function PerfilBar({styleComponent,perfilImg,link}) {
+function PerfilBar({styleComponent,perfilImg,link,linkPerfil}) {
 
     const [isDropDownVisible, setDropDownVisible] = useState(false)
 
@@ -34,7 +34,7 @@ function PerfilBar({styleComponent,perfilImg,link}) {
 
                     </div >
 
-                    {isDropDownVisible ? (<DropdownPerfil styleComponent={styleComponent}  onClose={() => setDropDownVisible(false)}> </DropdownPerfil>) : null}
+                    {isDropDownVisible ? (<DropdownPerfil linkPerfil={linkPerfil} styleComponent={styleComponent}  onClose={() => setDropDownVisible(false)}> </DropdownPerfil>) : null}
 
                     
                     

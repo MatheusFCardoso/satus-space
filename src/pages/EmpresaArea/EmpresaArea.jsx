@@ -3,12 +3,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-import Sidebar from "../../components/SideBar";
+import SideBarEmpresa from "../../components/SideBarEmpresa";
+import NavBarEmpresa from "../../components/Header/NavBarEmpresa";
 import AgendaBox from "../../components/AgendaBox";
-import BootcampCard from "../../components/BootcampCard";
 import Footer from "../../components/Footer/index"
-import NavBarUser from "../../components/Header/NavBarUser";
-import EmpresaVaga from "../../components/EmpresaVaga";
+
 
 import { BsSun } from "react-icons/bs"
 import { BsFillMoonFill } from "react-icons/bs"
@@ -24,6 +23,7 @@ import bootHtmlCss from "../../assets/image/bootcamp-HTML-CSS.png"
 import bootJava from "../../assets/image/bootcamp-JAVA-SPRING.png"
 
 import userArea from "../../../src/assets/image/user-area.png"
+
 
 
 
@@ -71,11 +71,11 @@ function EmpresaArea() {
 
     return (
         <div className="App" style={temaBg}>
-            <NavBarUser />
+            <NavBarEmpresa />
 
             <div className="container-fluid text-white">
                 <div className="row gx-2 gy-2">
-                    <Sidebar
+                    <SideBarEmpresa
 
                         extraButton={extraButton}
 

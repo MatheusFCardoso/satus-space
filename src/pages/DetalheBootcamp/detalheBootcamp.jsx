@@ -1,52 +1,75 @@
 import React from "react";
+import { useState } from "react";
 import "./style.css";
 
 import Sidebar from "../../components/SideBar";
 import Footer from "../../components/Footer";
 import NavBarUser from "../../components/Header/NavBarUser";
 import { MdArrowBackIosNew } from "react-icons/md";
-import useState from "react";
-import { Link } from "react-router-dom";
-import {BsFillMoonFill} from 'react-icons/bs';
-import {BsSun} from 'react-icons/bs';
 
+import { Link } from "react-router-dom";
+import { BsFillMoonFill } from 'react-icons/bs';
+import { BsSun } from 'react-icons/bs';
+
+
+//Footer dark e light mode
+import logoAzul from "../../assets/image/logoAzul.png";
+import fonteAzul from "../../assets/image/fonteAzul.png"
+import logoBranco from "../../assets/image/logo.png";
+import fonteBranco from "../../assets/image/fonteBranco.png"
 
 function DetalheBootcamp() {
 
-    /*inicio light e dark mode */
-/*   const [escuro, setEscuro] = useState(false)
+    const [escuro, setEscuro] = useState(true)
 
-  const temaBg = {
-      backgroundColor: escuro ? "var(--cor50)" : "var(--bgcolor3)",
-      color: escuro ? "white" : "black"
-  }
+    const temaBg = {
+        backgroundColor: escuro ? "var(--cor50)" : "var(--bgcolor3)",
+        color: escuro ? "white" : "black"
+    }
 
-  const extraButton = escuro ? <Link to="#" onClick={mudarTema}> <BsFillMoonFill className="mx-2" /> Alterar Tema</Link> : <Link to="#" onClick={mudarTema}>< BsSun className="mx-2" /> Alterar Tema</Link>
+    const extraButton = escuro ? <Link to="#" onClick={mudarTema}> <BsFillMoonFill className="mx-2" /> Alterar Tema</Link> : <Link to="#" onClick={mudarTema}>< BsSun className="mx-2" /> Alterar Tema</Link>
 
 
-  const temaCard = {
-      backgroundColor: escuro ? "var(--bgcolor)" : "var(--bgcolor4)",
-      color: escuro ? "white" : "black"
-  }
+    const temaCard = {
+        backgroundColor: escuro ? "var(--bgcolor)" : "var(--bgcolor4)",
+        color: escuro ? "white" : "black"
+    }
 
-  function mudarTema() {
-      setEscuro(!escuro)
-  } */
-/*fim light e dark mode */
+    const temaCard2 = {
+        backgroundColor: escuro ? "var(--bgcolor)" : "#dcdcdc",
+        color: escuro ? "white" : "black"
+    }
+
+    const logo = escuro ? logoBranco : logoAzul
+    const fonte = escuro ? fonteBranco : fonteAzul
+
+    function mudarTema() {
+        setEscuro(!escuro)
+    }
+
+    
 
 
 
     return (
 
-        <div>
-            <NavBarUser />
+        <div className="App" style={temaBg}>
+            <NavBarUser
+            
+            extraButton={extraButton}
+
+            />
             <div className="container-fluid">
                 <div className="row">
-                    <Sidebar />
-                    <div className="vagas-detalhe col-lg-10 col-md-12">
+                    <Sidebar
+
+                        extraButton={extraButton}
+
+                    />
+                    <div className="vagas-detalhe col-lg-10 col-md-12" style={temaCard}>
 
                         <div className="card-header" >
-                            <h3>Detalhes do bootcamp</h3>
+                            <h3>Detalhes do Bootcamp</h3>
                         </div>
                         <div className="card-body">
                             <h4 className="titleDesc">Desenvolvedor Front-End Jr</h4>
@@ -71,7 +94,7 @@ function DetalheBootcamp() {
                                 <li>Comunicação</li>
                                 <li>Trabalho em equipe</li>
                                 <li>Gestão do tempo</li>
-                                
+
                             </ul>
 
                             <h4 className="titleDesc">A Empresa - Empresa D </h4>
@@ -84,7 +107,13 @@ function DetalheBootcamp() {
                 </div>
             </div>
 
-            <Footer/>
+            <Footer 
+            
+            styleComponent={temaBg}
+            fonte={fonte}
+            logo={logo}
+
+            />
 
 
 

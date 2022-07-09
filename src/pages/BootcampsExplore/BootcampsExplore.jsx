@@ -5,54 +5,80 @@ import { BsSearch } from "react-icons/bs";
 import { MdRoom } from "react-icons/md";
 import { MdOutlinePaid } from "react-icons/md";
 import NavBarUser from "../../components/Header/NavBarUser";
+import Footer from "../../components/Footer";
 import { useState } from "react";
-import {BsFillMoonFill} from 'react-icons/bs';
-import {BsSun} from 'react-icons/bs';
+import { BsFillMoonFill } from 'react-icons/bs';
+import { BsSun } from 'react-icons/bs';
 import { Link } from "react-router-dom";
 import BootcampBox from "../../components/BootcampBox";
 
+import HtmlBootcamp from "../../components/HtmlBootcamp";
+import JavaBootcamp from "../../components/JavaBootcamp";
 
-function Vagas() {
+
+//Footer dark e light mode
+import logoAzul from "../../assets/image/logoAzul.png";
+import fonteAzul from "../../assets/image/fonteAzul.png"
+import logoBranco from "../../assets/image/logo.png";
+import fonteBranco from "../../assets/image/fonteBranco.png"
+
+
+function BootcampsExplore() {
   const [bootcampDados] = useState([
     {
       bootcamp: "Desenvolvedor Front-End Jr",
       empresa: "Satus Space e TOTVS",
       tecnologias: "HTML5, CSS3 e JavaScript",
       button: "Saiba Mais",
+      thumbNail: <HtmlBootcamp/>
     },
+    {
+      bootcamp: "Desenvolvedor Back-End Jr",
+      empresa: "Satus Space e TOTVS",
+      tecnologias: "Java, e SpringBoot",
+      button: "Saiba Mais",
+      thumbNail: <JavaBootcamp/>
+    }
   ]);
 
   /*inicio light e dark mode */
   const [escuro, setEscuro] = useState(true)
 
   const temaBg = {
-      backgroundColor: escuro ? "var(--cor50)" : "var(--bgcolor3)",
-      color: escuro ? "white" : "black"
+    backgroundColor: escuro ? "var(--cor50)" : "var(--bgcolor3)",
+    color: escuro ? "white" : "black"
   }
 
   const extraButton = escuro ? <Link to="#" onClick={mudarTema}> <BsFillMoonFill className="mx-2" /> Alterar Tema</Link> : <Link to="#" onClick={mudarTema}>< BsSun className="mx-2" /> Alterar Tema</Link>
 
 
   const temaCard = {
-      backgroundColor: escuro ? "var(--bgcolor)" : "var(--bgcolor4)",
-      color: escuro ? "white" : "black"
+    backgroundColor: escuro ? "var(--bgcolor)" : "var(--bgcolor4)",
+    color: escuro ? "white" : "black"
   }
 
   function mudarTema() {
-      setEscuro(!escuro)
+    setEscuro(!escuro)
   }
-/*fim light e dark mode */
+
+  const logo = escuro ? logoBranco : logoAzul
+  const fonte = escuro ? fonteBranco : fonteAzul
+  /*fim light e dark mode */
 
 
   return (
-    
+
     <div className="App" style={temaBg}>
-      <NavBarUser />
-      
+      <NavBarUser
+
+        extraButton={extraButton}
+
+      />
+
 
       <div className="container-fluid">
         <div className="row">
-          <Sidebar 
+          <Sidebar
             extraButton={extraButton}
           />
           <div className="col-lg-10 col-md-12 bootcampsMain" style={temaCard}>
@@ -125,7 +151,7 @@ function Vagas() {
               <div>
                 {bootcampDados.map((bootcamp) => (
                   <BootcampBox
-                  
+
                     styleComponent={temaCard}
 
                     bootcamp={bootcamp.bootcamp}
@@ -133,43 +159,29 @@ function Vagas() {
                     empresa={bootcamp.empresa}
                     tecnologias={bootcamp.tecnologias}
                     button={bootcamp.button}
+                    thumbNail={bootcamp.thumbNail}
                   />
                 ))}
               </div>
-              <div>
-                {bootcampDados.map((bootcamp) => (
-                  <BootcampBox
-                  
-                    styleComponent={temaCard}
-
-                    bootcamp={bootcamp.bootcamp}
-                    concluido={bootcamp.concluido}
-                    empresa={bootcamp.empresa}
-                    tecnologias={bootcamp.tecnologias}
-                    button={bootcamp.button}
-                  />
-                ))}
-              </div>
-              <div>
-                {bootcampDados.map((bootcamp) => (
-                  <BootcampBox
-                  
-                    styleComponent={temaCard}
-
-                    bootcamp={bootcamp.bootcamp}
-                    concluido={bootcamp.concluido}
-                    empresa={bootcamp.empresa}
-                    tecnologias={bootcamp.tecnologias}
-                    button={bootcamp.button}
-                  />
-                ))}
-              </div>
+              
             </div>
           </div>
         </div>
       </div>
+
+
+      <Footer
+
+        styleComponent={temaBg}
+        fonte={fonte}
+        logo={logo}
+
+
+      />
+
+
     </div>
   );
 }
 
-export default Vagas;
+export default BootcampsExplore
